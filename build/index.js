@@ -1,14 +1,14 @@
 "use strict";
 // count is of "type" number
-var count = 5;
+let count = 5;
 count = 10;
 // Const's type is a literal 
-var fname = "Max";
+const fname = "Max";
 // this makes a var of type nay
 // let testing;
-var testing;
+let testing;
 testing = 5;
-var student = {
+let student = {
     fname: "Andy",
     lname: "Anderson",
     grade: 12
@@ -17,12 +17,12 @@ var student = {
 function toString(student) {
     return JSON.stringify(student);
 }
-var toStringArrow = function (student) {
+const toStringArrow = (student) => {
     return JSON.stringify(student);
 };
 console.log(toString(student));
 function add(x, y) {
-    var result = x + y;
+    let result = x + y;
     return result;
 }
 // Tuple
@@ -34,6 +34,6 @@ function sendMessage() {
             grade: 12
         }];
 }
-var _a = sendMessage(), statusRes = _a[0], data = _a[1];
+const [statusRes, data] = sendMessage();
 if (statusRes == "success")
     console.log(data);
